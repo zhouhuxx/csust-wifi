@@ -4,7 +4,7 @@ def check():
     global count
     url = 'https://www.baidu.com'
     try:
-        requests.get(url, timeout=2)
+        requests.get(url, timeout=1)
         print('network connected.')
     except:
         if count == 3 :
@@ -51,7 +51,7 @@ def login():
             'para': '00', 
             '0MKKey': '123456'
             }
-        requests.post(url=post_url, data=post_data, timeout=3)
+        requests.post(url=post_url, data=post_data)
         check()
     except:
         print('connection error! please try to reconnect or try it later.')
